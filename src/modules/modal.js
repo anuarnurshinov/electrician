@@ -9,7 +9,9 @@ const modal = () => {
     const closeBtn = document.querySelector('.modal-close')
     const header = document.querySelector('.header')
     const callbackBtn = header.querySelector('.callback-btn')
+    const buttonServices = document.querySelector('.button-services')
     let bounceEaseOut
+
 
 
 
@@ -50,6 +52,14 @@ const modal = () => {
             }
         })
         serviceBlock.addEventListener('click', (e) => {
+            bounceEaseOut = makeEaseOut(bounce);
+            if (e.target.classList.contains('fancyboxModal')) {
+                animation()
+            } else if (e.target.classList.contains('modal-close')) {
+
+            }
+        })
+        buttonServices.addEventListener('click', (e) => {
             bounceEaseOut = makeEaseOut(bounce);
             if (e.target.classList.contains('fancyboxModal')) {
                 animation()
