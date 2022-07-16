@@ -1,20 +1,25 @@
 const slider = () => {
-    const sliderList = document.querySelectorAll('.item')
-    const sliderTextList = document.querySelectorAll('.table')
-    let currentSlide = 0
+    const topSlider = document.querySelector('.top-slider')
+    const slides = topSlider.querySelectorAll('.item')
+    const textCells = topSlider.querySelectorAll('.table')
+    let i = 0
 
-    sliderTextList.forEach(el => {
-        el.classList.add('active')
+    const sliderInterval = setInterval(() => {
+        let timerId = setTimeout(() => {
+            textCells[0].classList.toggle('active')
+            textCells[1].classList.toggle('active')
+            textCells[2].classList.toggle('active')
+            timerId = setTimeout(() => {
+                slides[i].toggleAttribute('hidden')
+                i++
+                if (i >= 2) {
+                    i = 0
+                }
+            }, 1500)
 
-    });
-    const idInterval = window.setInterval(() => {
-        sliderList[currentSlide].toggleAttribute('hidden')
-
-        currentSlide++
-        if (currentSlide === 2) {
-            currentSlide = 0
-        }
+        }, 1000);
     }, 3000)
+
 
 }
 

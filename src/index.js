@@ -5,6 +5,7 @@ import scroller from './modules/scroller'
 import slider from './modules/slider'
 import upScroller from './modules/upScroller'
 import questAndAnswer from './modules/questAndAnswer'
+import carousel from './modules/carousel'
 
 
 modal()
@@ -14,3 +15,4 @@ scroller()
 slider()
 upScroller()
 questAndAnswer()
+carousel()
