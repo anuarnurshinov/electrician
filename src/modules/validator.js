@@ -5,7 +5,7 @@ const validator = () => {
             e.target.value = e.target.value.replace(/[^\d-+-]/, '').replace(/^\s*/g, "")
         }
         if (e.target.getAttribute('name') === 'fio') {
-            e.target.value = e.target.value.replace(/[^А-я ]/, '').replace(/^\s*/g, "")
+            e.target.value = e.target.value.replace(/[^А-яA-z ]/, '').replace(/^\s*/g, "")
         }
     })
 }
